@@ -84,3 +84,15 @@ function positiveSum(arr) {
 }
 
 likes(['Alex', 'Jacob', 'Mark', 'Max']);
+
+// descending order
+
+function descendingOrder(n){
+  return parseFloat(n.toString().split('').sort().reverse().join('')) * Math.sign(n)
+ }
+
+ // string repeat
+
+ function repeatStr (n, s) {
+  return s.repeat(n);
+ }
