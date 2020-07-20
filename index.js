@@ -96,3 +96,18 @@ function descendingOrder(n){
  function repeatStr (n, s) {
   return s.repeat(n);
  }
+
+ // find average
+
+ function find_average(array) {
+  let sum = array.reduce((curr, accum)=>{
+    return curr+=accum;
+  }); 
+  return sum/array.length;
+}
+
+// disemvowel 
+
+function disemvowel(str) {
+  return str.replace(/[aeiouAEIOU]/g,"");
+}
