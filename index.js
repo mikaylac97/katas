@@ -111,3 +111,23 @@ function descendingOrder(n){
 function disemvowel(str) {
   return str.replace(/[aeiouAEIOU]/g,"");
 }
+
+// sum of numbers
+
+function getSum( a,b ){
+  if (a == b) return a; //(1)
+  if (a < b) {
+     return a + getSum(a+1, b); //(2)
+  }else {
+     return a + getSum(a-1,b); //(3)
+  }
+}
+
+//square each number
+
+const squareDigits = num => {
+  const digits = num.toString().split('')
+  const squaredDigits = digits.map(n => n * n)
+  const squaredNumber = squaredDigits.join('')
+  return parseInt(squaredNumber);
+}
