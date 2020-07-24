@@ -131,3 +131,7 @@ const squareDigits = num => {
   const squaredNumber = squaredDigits.join('')
   return parseInt(squaredNumber);
 }
+
+// open or senior
+
+return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
