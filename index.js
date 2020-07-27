@@ -135,3 +135,9 @@ const squareDigits = num => {
 // open or senior
 
 return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+
+// ones and zeros
+
+const binaryArrayToNumber = arr => {
+  return parseInt(arr.join(""), 2)
+};
