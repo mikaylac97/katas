@@ -141,3 +141,10 @@ return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Op
 const binaryArrayToNumber = arr => {
   return parseInt(arr.join(""), 2)
 };
+
+// reverse words
+
+function reverseWords(str) {
+  // Go for it
+  return str.split("").reverse().join("").split(" ").reverse().join(" ")
+}
