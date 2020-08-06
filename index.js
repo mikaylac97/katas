@@ -148,3 +148,11 @@ function reverseWords(str) {
   // Go for it
   return str.split("").reverse().join("").split(" ").reverse().join(" ")
 }
+
+// the coupon code
+
+function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  if(enteredCode === correctCode && Date.parse(expirationDate) >= Date.parse(currentDate)){
+    return true;
+  }  return false;
+}
