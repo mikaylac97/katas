@@ -156,3 +156,39 @@ function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
     return true;
   }  return false;
 }
+
+// 0810 class practice
+
+- what is package.json?
+
+the package.json holds the projects metadata including dependencies, scripts, etc
+
+get it in your project by using npm init
+
+- what is package-lock.json?
+
+the package-lock.json is used to lock dependencies to a specific version number
+
+- what are node_modules?
+
+all the files that are downloaded in the dependecies list
+
+- why do we need .gitignore file?
+
+it tells github which files are not to be shown on your repository, which can be used to secure sensitive information
+
+- what is .env file, why do we need it? which npm package do we need to use to utilize .env?
+
+helps up define variables that are crucial for our developing
+
+use dotenv to utilize in our projects
+
+- what are middlewares?
+
+middleware connects two apps together so that data/info can be passed between the two easily. we
+use this for requests like submitting forms 
+
+- which npm package do we need for password hashing?
+
+password-hash
+
