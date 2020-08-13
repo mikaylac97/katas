@@ -192,3 +192,15 @@ use this for requests like submitting forms
 
 password-hash
 
+// sort the odd
+
+function sortArray(array) {
+  let index = [];
+  
+  array
+      .filter((x, i) => x % 2 && index.push(i))
+      .sort((a, b) => a - b)
+      .forEach((x, i) => array[index[i]] = x);
+  
+  return array;
+  }
