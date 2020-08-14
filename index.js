@@ -204,3 +204,11 @@ function sortArray(array) {
   
   return array;
   }
+
+  // find the middle element
+
+  var gimme = function (inputArray) {
+    // Implement this function
+     const sortedArray = [...inputArray].sort((a,b) => a-b)
+     return inputArray.indexOf(sortedArray[1])
+  };
