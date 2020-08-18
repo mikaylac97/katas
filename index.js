@@ -212,3 +212,18 @@ function sortArray(array) {
      const sortedArray = [...inputArray].sort((a,b) => a-b)
      return inputArray.indexOf(sortedArray[1])
   };
+
+// sorted? yes? no? how?
+
+function isSortedAndHow(array) {
+  let sortedAscending = [...array].sort((a,b) => a-b)
+  let sortedDescending = [...array].sort((a,b) => b-a)
+
+  if(JSON.stringify(sortedAscending) === JSON.stringify(array)){
+    return 'yes, ascending'
+  } else if(JSON.stringify(sortedDescending) === JSON.stringify(array)){
+    return 'yes, descending'
+  } else {
+    return 'no'
+  }
+}
