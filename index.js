@@ -227,3 +227,14 @@ function isSortedAndHow(array) {
     return 'no'
   }
 }
+
+// Moving Zeros to the End
+
+var moveZeros = function (arr) {
+  let zeros = arr.filter((x,i) => x === 0)
+  let arrNoZeros = [...arr].filter((x) => x !== 0)
+  let arrAndZeros = arrNoZeros.concat(zeros)
+
+  return arrAndZeros;
+
+}
