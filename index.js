@@ -205,6 +205,14 @@ function sortArray(array) {
   return array;
   }
 
+// sort the odd (other solution)
+
+const sortArray = arr => {
+  const sortedOdds = arr.filter(el => el%2).sort((a,b) => a-b);
+
+  return arr.map(el => el%2 ? sortedOdds.shift() : el)
+}
+
   // find the middle element
 
   var gimme = function (inputArray) {
@@ -237,4 +245,18 @@ var moveZeros = function (arr) {
 
   return arrAndZeros;
 
+}
+
+// search in a multidimentional array
+
+// Build Tower
+
+function towerBuilder(nFloor){
+  var array=[];
+  for(var i=0; i<nFloor; i++){
+    array.push(" ".repeat(nFloor-i-1)+
+               "*".repeat(2*i+1)+
+               " ".repeat(nFloor-i-1));
+  }
+  return array;
 }
