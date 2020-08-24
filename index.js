@@ -260,3 +260,19 @@ function towerBuilder(nFloor){
   }
   return array;
 }
+
+// Get the middle character
+
+function getMiddle(s) {
+  //Code goes here!
+  for(let i=0; i<s.length; i++){
+    if(s.length%2 === 0){
+      let middleLetter = s.length/2
+      return `${s[middleLetter-1]}${s[middleLetter]}`
+    } else if(s.length%2 !== 0) {
+      let middleLetter = Math.floor(s.length/2)
+      return s[middleLetter];
+    }
+  }
+
+}
