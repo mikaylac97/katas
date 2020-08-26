@@ -274,7 +274,18 @@ function getMiddle(s) {
       return s[middleLetter];
     }
   }
+}
 
+// refactored
+
+function getMiddle(s){
+  let length = s.length/2;
+  if(s.length%2 === 0){
+    let string = s.slice(length-1, length+1)
+    return string;
+  } else {
+    return s[Math.floor(length)]
+  }
 }
 
 // Dehashatize it
