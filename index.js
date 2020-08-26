@@ -276,3 +276,13 @@ function getMiddle(s) {
   }
 
 }
+
+// Dehashatize it
+
+function dashatize(num) {
+  return num.toString().
+    replace(/([13579])/g,'-$1-'). 
+    replace(/\-+/g,'-'). 
+    replace(/^\-/,''). 
+    replace(/\-$/,''); 
+}
