@@ -288,6 +288,12 @@ function getMiddle(s){
   }
 }
 
+// refactored --> one liner
+
+function getMiddle(s) {
+  return s.length % 2 === 0 ? s.slice(s.length/2-1, s.length/2+1) : s[Math.floor(s.length/2)];
+}
+
 // Dehashatize it
 
 function dashatize(num) {
@@ -296,4 +302,81 @@ function dashatize(num) {
     replace(/\-+/g,'-'). 
     replace(/^\-/,''). 
     replace(/\-$/,''); 
+}
+
+// Backwards read primes
+
+function backwardsPrime(start, stop){
+  let result =[];
+  for(i=start; i<=stop; i++){
+
+  }
+
+  function isPrime(num) {
+    for(let i=2; i<=Math.sqrt(num); i++){
+      if(num % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  function isReversePrime(num) {
+    let reverseNum = num.toString().split('').reverse().join('')
+    if(num !== reverseNum){
+      return isPrime(reverseNum)
+    }
+  }
+}
+
+// String Scramble
+
+function scramble(str, arr) {
+  let result = []; 
+  for(let i=0; i<str.length; i++){
+    result[arr[i]] = str[i];
+  }
+ return result.join('');
+};
+
+// Detect Pangram
+
+function isPangram(string){
+  let newStr = string.toLowerCase()
+    if(newStr.includes('a') && 
+      newStr.includes('b') &&
+      newStr.includes('c') &&
+      newStr.includes('d') &&
+      newStr.includes('e') &&
+      newStr.includes('f') &&
+      newStr.includes('g') &&
+      newStr.includes('h') &&
+      newStr.includes('i') &&
+      newStr.includes('j') &&
+      newStr.includes('k') &&
+      newStr.includes('l') &&
+      newStr.includes('m') &&
+      newStr.includes('n') &&
+      newStr.includes('o') &&
+      newStr.includes('p') &&
+      newStr.includes('q') &&
+      newStr.includes('r') &&
+      newStr.includes('s') &&
+      newStr.includes('t') &&
+      newStr.includes('u') &&
+      newStr.includes('v') &&
+      newStr.includes('w') &&
+      newStr.includes('x') &&
+      newStr.includes('y') &&
+      newStr.includes('z') 
+    ){
+      return true;
+    } return false;
+}
+
+// Detect Pangram (refactor)
+
+function isPangram(string){
+  return 'abcdefghijklmnopqrstuvwxyz'
+    .split('')
+    .every((x) => string.toLowerCase().includes(x));
 }
