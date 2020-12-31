@@ -380,3 +380,65 @@ function isPangram(string){
     .split('')
     .every((x) => string.toLowerCase().includes(x));
 }
+
+// Coding Meetup #1
+
+function countDevelopers(list) {
+  // your awesome code here :)
+  return list.filter((obj) => obj.continent === 'Europe' && obj.language === 'JavaScript').length
+}
+
+// Coding Meetup #2
+
+function greetDevelopers(list) {
+  // thank you for checking out my kata :)
+ list.forEach(obj => obj.greeting = `Hello ${obj.firstName}, what do you like most about ${obj.language}?`)
+ return list;
+}
+
+// Coding Meetup #3
+
+function isRubyComing(list) {
+  // thank you for checking out my kata :)
+ const rubyDevs = list.find(obj => obj.language === 'Ruby')
+ return rubyDevs ? true : false
+}
+
+// Coding Meetup #4
+
+function getFirstPython(list) {
+  // Thank you for checking out my kata :)
+  const pythonDevs = list.find(obj => obj.language === 'Python')
+  return pythonDevs ? `${pythonDevs.firstName}, ${pythonDevs.country}` : `There will be no Python developers`
+}
+
+// Coding Meetup #6
+
+function isSameLanguage(list) {
+  // thank you for checking out the Coding Meetup kata :)
+  const language = list[0].language;
+  return list.every(obj => obj.language === language) ? true : false
+}
+
+// Coding Meetup #12
+
+function findAdmin(list, lang) {
+  // thank you for checking out the Coding Meetup kata :)
+  return list.filter(obj => obj.language === lang && obj.githubAdmin === 'yes')
+}
+
+// Filter Coffee
+
+function search(budget, prices) {
+  // return array of prices that are within budget
+  const canAfford = prices.filter(x => x<=budget).sort((a,b) => a-b)
+  return canAfford.toString();
+  }
+
+  // Break Camel Case
+
+  function solution(string) {
+    var result = string.replace( /([A-Z])/g, " $1" );
+    var finalResult = string.charAt(0) + result.slice(1);
+      return finalResult;
+    }
